@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo Card</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <div class="min-h-screen flex items-center justify-center p-6">
+    <article data-testid="test-todo-card" class="todo-card">
+      <div class="card-body">
+        <h2 data-testid="test-todo-title" id="todo-title" class="todo-title">
+          pick outfit for outing
+        </h2>
+        <hr />
+        <br />
+        <p data-testid="test-todo-description" class="todo-description">
+          the outfit theme is corporate casual, so a cute button down and jeans with flats would work
+        </p>
+        <div class="toggle-row">
+          <div class="toggle-label">Mark as completed</div>
+          <label class="toggle-switch">
+            <input
+              type="checkbox"
+              data-testid="test-todo-complete-toggle"
+              id="complete-toggle"
+            />
+            <div class="toggle-track"></div>
+            <div class="toggle-thumb"></div>
+          </label>
+        </div>
+        <div class="badges">
+          <span data-testid="test-todo-priority" class="badge badge-priority">High</span>
+          <span data-testid="test-todo-status" id="status-badge" class="badge badge-pending">Pending</span>
+        </div>
+        <p class="category-label">category</p>
+        <div data-testid="test-todo-tags" class="tags">
+          <span data-testid="test-todo-tag-social" class="tag">social</span>
+          <span data-testid="test-todo-tag-fashion" class="tag">fashion</span>
+        </div>
+
+        <hr />
+        <div class="card-footer">
+          <div>
+            <time data-testid="test-todo-due-date" class="due-date">Thu Apr 16 2026</time>
+            <div data-testid="test-todo-time-remaining" id="time-remaining" class="time-remaining">
+            </div>
+          </div>
+
+          <div class="action-buttons">
+            <button data-testid="test-todo-edit-button" id="edit-btn" class="btn btn-edit">Edit</button>
+            <button data-testid="test-todo-delete-button" id="delete-btn" class="btn btn-delete">Delete</button>
+          </div>
+        </div>
+
+      </div>
+    </article>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
